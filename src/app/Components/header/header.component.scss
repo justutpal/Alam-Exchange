@@ -13,10 +13,11 @@ mat-icon {
 }
 
 button {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .inputSeciton {
+  margin-left: 10px;
   width: 50%;
 }
 
@@ -48,4 +49,15 @@ input {
   position: fixed;
   border-radius: 20px;
   box-shadow: 10px 10px 30px black;
+}
+
+@media only screen and (max-width: 650px) {
+  button {
+    padding: 10px 17px;
+  }
+
+  .lowerToolbar span {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
