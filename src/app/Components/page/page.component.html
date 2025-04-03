@@ -1,0 +1,37 @@
+<mat-card>
+
+    <mat-card-header>
+
+        <mat-card-title>
+            <h1>{{pageCardTitle}}</h1>
+        </mat-card-title>
+
+        <mat-card-subtitle>
+            <p>{{pageCardSubTitle}}</p>
+        </mat-card-subtitle>
+
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <img src="{{pageCardImage}}" alt="{{pageCardImage}}" *ngIf="img1">
+        <img src="{{pageCardImage2}}" alt="{{pageCardImage2}}" *ngIf="img2">
+        <img src="{{pageCardImage3}}" alt="{{pageCardImage3}}" *ngIf="img3">
+
+        <div class="slider">
+            <div class="subslider" [ngStyle]="{'background-color': img1? 'black' : 'rgb(114, 114, 114)'}"></div>
+            <div class="subslider" [ngStyle]="{'background-color': img2? 'black' : 'rgb(114, 114, 114)'}"></div>
+            <div class="subslider" [ngStyle]="{'background-color': img3? 'black' : 'rgb(114, 114, 114)'}"></div>
+        </div>
+
+        <p>{{pageCardPara}}</p>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a
+            href="https://api.whatsapp.com/send?phone=918986148921&text=Hi%20sir!%20%0AI%20am%20Intrested%20in {{pageCardTitle}}"><button
+                mat-flat-button>Buy</button></a>
+    </mat-card-actions>
+
+</mat-card>

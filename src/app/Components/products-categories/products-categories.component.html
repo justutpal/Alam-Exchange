@@ -1,0 +1,18 @@
+<p>Products Categories</p>
+<div class="cardSection">
+    @for (Product of ProductArray; track $index) {
+    <app-cards (exploreButton)="openPage(Product)" [cardImage]="Product.cardImage" [cardHeader]="Product.name"
+        [cardPara]="Product.massage"></app-cards>
+    }
+</div>
+<div class="cardSpace">
+    @for (Product of ProductArray; track $index) {
+    <p> {{Product.name}} Related Products</p>
+    <div class="cardSection">
+        @for (item of countArray; track $index) {
+        <app-cards (exploreButton)="openPage(Product)" [cardArray]="Product" [cardImage]="Product.cardImage"
+            [cardHeader]="Product.name" [cardPara]="Product.massage"></app-cards>
+        }
+    </div>
+    }
+</div>
